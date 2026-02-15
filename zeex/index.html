@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root@Zarak:~#</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="matrix-canvas"></canvas>
+    <div class="overlay"></div>
+
+    <main class="terminal">
+        <header class="terminal-header">
+            <span class="buttons">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </span>
+            <nav class="terminal-nav">
+                <a href="#intro">/whoami</a>
+                <a href="#edu">/edu</a>
+                <a href="#loot">/loot</a>
+                <a href="#hobbies">/hobbies</a>
+                <a href="#contact">/contact</a>
+            </nav>
+        </header>
+        
+        <section class="content" id="terminal-content">
+            <div id="intro" class="section">
+                <h2 class="header-highlight">USER_BIO</h2>
+                <div class="profile-header">
+                    <img src="mypic.jpeg" alt="Zarak Afridi" class="profile-img">
+                    <div>
+                        <div class="prompt">guest@zarak-afridi:~$ <span class="command">whoami</span></div>
+                        <p id="typing-text"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="edu" class="section">
+                <h2 class="header-highlight">EDUCATION</h2>
+                <div class="prompt">guest@zarak-afridi:~$ <span class="command">ls education</span></div>
+                <div class="edu-box">
+                    <div class="edu-item"><span class="year">[2025-Present]</span> <strong>BS Cyber Security</strong> — PAF-IAST, Haripur</div>
+                    <div class="edu-item"><span class="year">[2023-2025]</span> <strong>F.Sc Pre-Engineering</strong> — IMCB G-10/4, Islamabad</div>
+                    <div class="edu-item"><span class="year">[2021-2023]</span> <strong>Matriculation</strong> — IMSB G-11/2, Islamabad</div>
+                </div>
+            </div>
+
+            <div id="loot" class="section">
+                <h2 class="header-highlight">LOOT_FOUND</h2>
+                <div class="prompt">guest@zarak-afridi:~$ <span class="command">cat certificates.log</span></div>
+                <div class="cert-grid">
+                    <div class="cert-card" onclick="openModal(this)">
+                        <img src="techjam.jpeg" alt="TechJam">
+                        <div class="cert-info">
+                            <h4>TechJam 2026</h4>
+                            <p>CTF competitor at PAF-IAST. Focused on Web Exploitation and Cryptography.</p>
+                        </div>
+                    </div>
+                    <div class="cert-card" onclick="openModal(this)">
+                        <img src="red.jpeg" alt="CTIGA">
+                        <div class="cert-info">
+                            <h4>CTIGA Analyst</h4>
+                            <p>Threat Intelligence & Governance Analyst. Specialized in mapping TTPs to Mitre ATT&CK.</p>
+                        </div>
+                    </div>
+                   <div class="cert-card" onclick="openModal(this)">
+                        <img src="ccert.jpeg" alt="C Basics">
+                        <div class="cert-info">   
+                            <h4>C Language Basics</h4>
+                            <p>I have completed the C language basics from the SchlarHat online.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card" onclick="openModal(this)">
+                        <img src="phish.jpeg" alt="CPPS">
+                        <div class="cert-info">
+                            <h4>CPPS Specialist</h4>
+                            <p>Certified Phishing Prevention Specialist. Expertise in social engineering defense.</p>
+                        </div>
+                    </div>
+                    <div class="cert-card" onclick="openModal(this)">
+                        <img src="cyber.jpeg" alt="IBM">
+                        <div class="cert-info">
+                            <h4>IBM Cyber Cert</h4>
+                            <p>Professional certification covering SOC operations and incident response.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hobbies" class="section">
+                <h2 class="header-highlight">INTERESTS</h2>
+                <div class="prompt">guest@zarak-afridi:~$ <span class="command">grep "hobbies"</span></div>
+                <ul class="hobby-list">
+                    <li><i class="fas fa-tv"></i> Watching movies & Netflix</li>
+                    <li><i class="fas fa-user-secret"></i> Ethical hacking & cyber research</li>
+                    <li><i class="fas fa-video"></i> Video editing & content creation</li>
+                    <li><i class="fas fa-gamepad"></i> Gaming — PUBG Mobile, GTA V</li>
+                    <li><i class="fas fa-book"></i> Reading novels & tech articles</li>
+                </ul>
+            </div>
+
+            <div id="contact" class="section">
+                <h2 class="header-highlight">CONTACT</h2>
+                <div class="prompt">guest@zarak-afridi:~$ <span class="command">./contact.py</span></div>
+                <div class="contact-grid">
+                    <a href="tel:+923163518840" class="contact-item"><i class="fas fa-phone"></i> +92 3163518840</a>
+                    <a href="mailto:zeeek317@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> zeeek317@gmail.com</a>
+                    <a href="https://instagram.com/zeek._khan" target="_blank" class="contact-item"><i class="fab fa-instagram"></i> @zeek._khan</a>
+                </div>
+                <p style="margin-top:20px">Loot Found: <a href="https://github.com/zarak" style="color:#0f0">github.com/zarak</a></p>
+            </div>
+        </section>
+    </main>
+
+    <div id="cert-modal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content-container">
+            <img class="modal-img" id="full-cert-img">
+            <div id="caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
