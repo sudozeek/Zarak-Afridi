@@ -3,128 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Root@Zarak:~#</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Zarak Afridi | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background Elements -->
     <canvas id="matrix-canvas"></canvas>
-    <div class="overlay"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
 
-    <main class="terminal">
-        <header class="terminal-header">
-            <span class="buttons">
-                <span class="close"></span>
-                <span class="minimize"></span>
-                <span class="maximize"></span>
-            </span>
-            <nav class="terminal-nav">
-                <a href="#intro">/whoami</a>
-                <a href="#edu">/edu</a>
-                <a href="#loot">/loot</a>
-                <a href="#hobbies">/hobbies</a>
-                <a href="#contact">/contact</a>
-            </nav>
-        </header>
-        
-        <section class="content" id="terminal-content">
-            <div id="intro" class="section">
-                <h2 class="header-highlight">USER_BIO</h2>
-                <div class="profile-header">
-                    <img src="mypic.jpeg" alt="Zarak Afridi" class="profile-img">
-                    <div>
-                        <div class="prompt">guest@zarak-afridi:~$ <span class="command">whoami</span></div>
-                        <p id="typing-text"></p>
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-bracket">&lt;</span>Zarak<span class="logo-dot">.</span>Afridi<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#intro">About</a></li>
+                <li><a href="#edu">Education</a></li>
+                <li><a href="#loot">Certificates</a></li>
+                <li><a href="#hobbies">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+        <!-- Hero & Intro Section -->
+        <section id="intro" class="section">
+            <div class="hero-content">
+                
+                <!-- MOBILE LAYOUT (Profile Pic Upper Left) -->
+                <div class="mobile-hero reveal">
+                    <div class="mobile-hero-header">
+                        <div class="profile-img-wrap-mobile">
+                            <img src="mypic.jpeg" alt="Zarak Afridi" class="profile-img">
+                        </div>
+                        <div class="mobile-hero-title-area">
+                            <p class="hero-subtitle">STUDENT & RESEARCHER</p>
+                            <h1 class="mobile-hero-title">Zarak Afridi</h1>
+                            <p class="hero-age-tag">19 Years Old &bull; BS Cybersecurity</p>
+                        </div>
+                    </div>
+                    <div class="mobile-hero-body">
+                        <p class="mobile-hero-bio">
+                            I am a 19-year-old Cybersecurity Student at PAF-IAST, security researcher, and CTF player specializing in offensive security, vulnerability assessment, and automation scripting. I analyze and secure modern systems through research and active security engineering.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- DESKTOP LAYOUT -->
+                <div class="desktop-hero reveal">
+                    <div class="hero-text-content">
+                        <p class="hero-subtitle">CYBERSECURITY STUDENT & RESEARCHER</p>
+                        <h1 class="hero-title">Hi, I'm <span class="gradient-text">Zarak Afridi</span></h1>
+                        <p class="hero-desc">
+                            I am a 19-year-old Cybersecurity Student at PAF-IAST, security researcher, and CTF player specializing in offensive security, vulnerability assessment, and automation scripting. I break code to understand its security posture and develop resilient defense systems through deep technical research.
+                        </p>
+                    </div>
+                    <div class="hero-profile-desktop">
+                        <div class="profile-img-glow"></div>
+                        <div class="profile-img-wrap-desktop">
+                            <img src="mypic.jpeg" alt="Zarak Afridi" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="edu" class="section">
+            <h2 class="section-title reveal">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal reveal-delay-1">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025 - Present</div>
+                        <h3 class="timeline-title">BS Cyber Security</h3>
+                        <div class="timeline-org">PAF-IAST, Haripur</div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-delay-2">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023 - 2025</div>
+                        <h3 class="timeline-title">F.Sc (ICS)</h3>
+                        <div class="timeline-org">IMCB G-10/4, Islamabad</div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal reveal-delay-3">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021 - 2023</div>
+                        <h3 class="timeline-title">Matriculation</h3>
+                        <div class="timeline-org">IMSB G-11/2, Islamabad</div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div id="edu" class="section">
-                <h2 class="header-highlight">EDUCATION</h2>
-                <div class="prompt">guest@zarak-afridi:~$ <span class="command">ls education</span></div>
-                <div class="edu-box">
-                    <div class="edu-item"><span class="year">[2025-Present]</span> <strong>BS Cyber Security</strong> — PAF-IAST, Haripur</div>
-                    <div class="edu-item"><span class="year">[2023-2025]</span> <strong>F.Sc (ICS) </strong> — IMCB G-10/4, Islamabad</div>
-                    <div class="edu-item"><span class="year">[2021-2023]</span> <strong>Matriculation</strong> — IMSB G-11/2, Islamabad</div>
+        <!-- Certificates Section -->
+        <section id="loot" class="section">
+            <h2 class="section-title reveal">Certificates</h2>
+            <div class="cert-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card reveal reveal-delay-1" onclick="openModal(this)">
+                    <div class="cert-image-container">
+                        <img src="llm_cert.jpg" alt="LLM Security">
+                        <div class="cert-overlay"></div>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-badge">AI & LLM Security</span>
+                        <h4>Certified LLM Security Professional (CLLMSP)</h4>
+                        <p>Certified by Red Team Leaders. Focuses on prompt injection mitigation, training data security, and safeguarding generative AI applications.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div id="loot" class="section">
-                <h2 class="header-highlight">LOOT_FOUND</h2>
-                <div class="prompt">guest@zarak-afridi:~$ <span class="command">cat certificates.log</span></div>
-                <div class="cert-grid">
-                    <div class="cert-card" onclick="openModal(this)">
+                <!-- Cert 2 -->
+                <div class="cert-card reveal reveal-delay-2" onclick="openModal(this)">
+                    <div class="cert-image-container">
                         <img src="techjam.jpeg" alt="TechJam">
-                        <div class="cert-info">
-                            <h4>TechJam 2026</h4>
-                            <p>CTF competitor at PAF-IAST. Focused on Web Exploitation and Cryptography.</p>
-                        </div>
+                        <div class="cert-overlay"></div>
                     </div>
-                    <div class="cert-card" onclick="openModal(this)">
+                    <div class="cert-info">
+                        <span class="cert-badge">CTF Competitor</span>
+                        <h4>TechJam 2026</h4>
+                        <p>CTF competitor at PAF-IAST. Focused on Web Exploitation and Cryptography.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card reveal reveal-delay-3" onclick="openModal(this)">
+                    <div class="cert-image-container">
                         <img src="red.jpeg" alt="CTIGA">
-                        <div class="cert-info">
-                            <h4>CTIGA Analyst</h4>
-                            <p>Threat Intelligence & Governance Analyst. Specialized in mapping TTPs to Mitre ATT&CK.</p>
-                        </div>
+                        <div class="cert-overlay"></div>
                     </div>
-                   <div class="cert-card" onclick="openModal(this)">
+                    <div class="cert-info">
+                        <span class="cert-badge">Threat Intel</span>
+                        <h4>CTIGA Analyst</h4>
+                        <p>Threat Intelligence & Governance Analyst. Specialized in mapping TTPs to Mitre ATT&CK.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="cert-card reveal reveal-delay-4" onclick="openModal(this)">
+                    <div class="cert-image-container">
                         <img src="ccert.jpeg" alt="C Basics">
-                        <div class="cert-info">   
-                            <h4>C Language Basics</h4>
-                            <p>I have completed the C language basics from the SchlarHat online.</p>
-                        </div>
+                        <div class="cert-overlay"></div>
                     </div>
+                    <div class="cert-info">
+                        <span class="cert-badge">Programming</span>
+                        <h4>C Language Basics</h4>
+                        <p>Completed C language basics training from ScholarHat online.</p>
+                    </div>
+                </div>
 
-                    <div class="cert-card" onclick="openModal(this)">
+                <!-- Cert 5 -->
+                <div class="cert-card reveal reveal-delay-5" onclick="openModal(this)">
+                    <div class="cert-image-container">
                         <img src="phish.jpeg" alt="CPPS">
-                        <div class="cert-info">
-                            <h4>CPPS Specialist</h4>
-                            <p>Certified Phishing Prevention Specialist. Expertise in social engineering defense.</p>
-                        </div>
+                        <div class="cert-overlay"></div>
                     </div>
-                    <div class="cert-card" onclick="openModal(this)">
+                    <div class="cert-info">
+                        <span class="cert-badge">Social Engineering</span>
+                        <h4>CPPS Specialist</h4>
+                        <p>Certified Phishing Prevention Specialist. Expertise in social engineering defense.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="cert-card reveal reveal-delay-1" onclick="openModal(this)">
+                    <div class="cert-image-container">
                         <img src="cyber.jpeg" alt="IBM">
-                        <div class="cert-info">
-                            <h4>IBM Cyber Cert</h4>
-                            <p>Professional certification covering SOC operations and incident response.</p>
+                        <div class="cert-overlay"></div>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-badge">IBM Certified</span>
+                        <h4>IBM Cyber Cert</h4>
+                        <p>Professional certification covering SOC operations and incident response.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="hobbies" class="section">
+            <h2 class="section-title reveal">Interests</h2>
+            <div class="hobbies-container reveal">
+                <div class="hobby-grid">
+                    <div class="hobby-card">
+                        <div class="hobby-icon-wrap"><i class="fas fa-user-secret"></i></div>
+                        <div class="hobby-text-wrap">
+                            <h4>Ethical Hacking</h4>
+                            <p>Cyber research, CTFs, vulnerability assessment, and offensive security scripting.</p>
+                        </div>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon-wrap"><i class="fas fa-video"></i></div>
+                        <div class="hobby-text-wrap">
+                            <h4>Video Editing</h4>
+                            <p>Creating engaging content and video editing using professional suites.</p>
+                        </div>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon-wrap"><i class="fas fa-gamepad"></i></div>
+                        <div class="hobby-text-wrap">
+                            <h4>Gaming</h4>
+                            <p>Playing tactical and open-world games like PUBG Mobile and GTA V.</p>
+                        </div>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon-wrap"><i class="fas fa-tv"></i></div>
+                        <div class="hobby-text-wrap">
+                            <h4>Movies & Media</h4>
+                            <p>Following high-concept films, tech shows, and documentaries.</p>
+                        </div>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon-wrap"><i class="fas fa-book"></i></div>
+                        <div class="hobby-text-wrap">
+                            <h4>Tech Reading</h4>
+                            <p>Subscribed to security bulletins, novels, and emerging tech news.</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div id="hobbies" class="section">
-                <h2 class="header-highlight">INTERESTS</h2>
-                <div class="prompt">guest@zarak-afridi:~$ <span class="command">grep "hobbies"</span></div>
-                <ul class="hobby-list">
-                    <li><i class="fas fa-tv"></i> Watching movies & Netflix</li>
-                    <li><i class="fas fa-user-secret"></i> Ethical hacking & cyber research</li>
-                    <li><i class="fas fa-video"></i> Video editing & content creation</li>
-                    <li><i class="fas fa-gamepad"></i> Gaming — PUBG Mobile, GTA V</li>
-                    <li><i class="fas fa-book"></i> Reading novels & tech articles</li>
-                </ul>
-            </div>
-
-            <div id="contact" class="section">
-                <h2 class="header-highlight">CONTACT</h2>
-                <div class="prompt">guest@zarak-afridi:~$ <span class="command">./contact.py</span></div>
-                <div class="contact-grid">
-                    <a href="tel:+923163518840" class="contact-item"><i class="fas fa-phone"></i> +92 3163518840</a>
-                    <a href="mailto:zeeek317@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> zeeek317@gmail.com</a>
-                    <a href="https://instagram.com/zeek._khan" target="_blank" class="contact-item"><i class="fab fa-instagram"></i> @zeek._khan</a>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title reveal">Contact Me</h2>
+            <div class="contact-container reveal">
+                <p class="contact-intro">Let's connect! I am always open to discussing cybersecurity opportunities, collaboration projects, or technical inquiries.</p>
+                <div class="contact-horizontal">
+                    <a href="tel:+923163518840" class="contact-link-simple">
+                        <i class="fas fa-phone"></i>
+                        <span>+92 3163518840</span>
+                    </a>
+                    <a href="mailto:zeeek317@gmail.com" class="contact-link-simple">
+                        <i class="fas fa-envelope"></i>
+                        <span>zeeek317@gmail.com</span>
+                    </a>
+                    <a href="https://instagram.com/zeek._khan" target="_blank" class="contact-link-simple">
+                        <i class="fab fa-instagram"></i>
+                        <span>@zeek._khan</span>
+                    </a>
+                    <a href="https://github.com/sudozeek" target="_blank" class="contact-link-simple">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/sudozeek</span>
+                    </a>
                 </div>
-                <p style="margin-top:20px">Loot Found: <a href="https://github.com/sudozeek" style="color:#0f0">github.com/sudozeek</a></p>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Zarak Afridi. All rights reserved.</p>
+    </footer>
+
+    <!-- Certificates Modal -->
     <div id="cert-modal" class="modal">
         <span class="close-modal" onclick="closeModal()">&times;</span>
         <div class="modal-content-container">
-            <img class="modal-img" id="full-cert-img">
+            <img class="modal-img" id="full-cert-img" src="" alt="Certificate View">
             <div id="caption"></div>
         </div>
     </div>
 
+    <!-- Main JavaScript Logic -->
     <script src="script.js"></script>
 </body>
 </html>
